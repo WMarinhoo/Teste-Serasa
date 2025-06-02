@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.6 on win32)" generated="20250602 13:03:29.678" rpa="false" schemaversion="4">
+<suite id="s1" name="Teste Serasa" source="C:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa">
+<suite id="s1-s1" name="TestCase" source="C:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase">
+<suite id="s1-s1-s1" name="01 FuncionalidadePix" source="C:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase\01_FuncionalidadePix.robot">
+<test id="s1-s1-s1-t1" name="Cenário 01: Exibição dos métodos de pagamento (PIX e Boleto)" line="10">
+<kw name="Dado que esteja no Portal &quot;SERASA&quot;" library="01_FuncionalidadePix">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TELA_SERASA}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20250602 13:03:31.632" level="INFO">Opening browser 'chrome' to base url 'https://www.serasa.com.br/limpa-nome-online/'.</msg>
+<status status="PASS" starttime="20250602 13:03:31.631" endtime="20250602 13:03:38.249"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20250602 13:03:38.250" endtime="20250602 13:03:38.372"/>
+</kw>
+<status status="PASS" starttime="20250602 13:03:31.630" endtime="20250602 13:03:38.372"/>
+</kw>
+<kw name="E Clicar no botão &quot;Entrar&quot;" library="01_FuncionalidadePix" sourcename="E Clicar no botão &quot;${NOME_BOTAO}&quot;">
+<kw name="Gera Frase Em String" library="RPA_Utils">
+<var>${NOME_BOTAO}</var>
+<arg>${NOME_BOTAO}</arg>
+<msg timestamp="20250602 13:03:38.406" level="INFO">${NOME_BOTAO} = ENTRAR</msg>
+<status status="PASS" starttime="20250602 13:03:38.404" endtime="20250602 13:03:38.406"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BOTAO_${NOME_BOTAO}}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250602 13:03:38.407" endtime="20250602 13:03:38.513"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_${NOME_BOTAO}}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250602 13:03:38.515" level="INFO">Clicking element '//a[contains(@class,'ea-button ea-button--ghost ht-cta')]'.</msg>
+<status status="PASS" starttime="20250602 13:03:38.514" endtime="20250602 13:03:39.829"/>
+</kw>
+<status status="PASS" starttime="20250602 13:03:38.401" endtime="20250602 13:03:39.829"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20250602 13:03:39.835" endtime="20250602 13:03:43.850"/>
+</kw>
+<doc>Exibição dos métodos de pagamento (PIX e Boleto).</doc>
+<status status="PASS" starttime="20250602 13:03:31.628" endtime="20250602 13:03:43.852"/>
+</test>
+<doc>Essa suíte testa o módulo da nova funcionalidade PIX Serasa Consumidor</doc>
+<status status="PASS" starttime="20250602 13:03:29.727" endtime="20250602 13:03:43.856"/>
+</suite>
+<status status="PASS" starttime="20250602 13:03:29.721" endtime="20250602 13:03:43.863"/>
+</suite>
+<status status="PASS" starttime="20250602 13:03:29.688" endtime="20250602 13:03:43.866"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste Serasa">Teste Serasa</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCase">Teste Serasa.TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="01 FuncionalidadePix">Teste Serasa.TestCase.01 FuncionalidadePix</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20250602 13:03:29.734" level="ERROR">Error in file 'C:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase\01_FuncionalidadePix.robot' on line 5: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg timestamp="20250602 13:03:29.736" level="ERROR">Error in file 'C:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\Resource\01_FuncionalidadePix.robot' on line 2: Error in file 'C:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase\01_FuncionalidadePix.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>

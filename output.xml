@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.6 on win32)" generated="20250602 13:03:28.565" rpa="false" schemaversion="4">
+<suite id="s1" name="Área de Trabalho" source="c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho">
+<suite id="s1-s1" name="Teste Serasa" source="c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa">
+<suite id="s1-s1-s1" name="TestCase" source="c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase">
+<suite id="s1-s1-s1-s1" name="01 FuncionalidadePix" source="c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase\01_FuncionalidadePix.robot">
+<test id="s1-s1-s1-s1-t1" name="Cenário 01: Exibição dos métodos de pagamento (PIX e Boleto)" line="10">
+<kw name="Dado que esteja no Portal &quot;SERASA&quot;" library="01_FuncionalidadePix">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${TELA_SERASA}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20250602 13:03:30.723" level="INFO">Opening browser 'chrome' to base url 'https://www.serasa.com.br/limpa-nome-online/'.</msg>
+<status status="PASS" starttime="20250602 13:03:30.722" endtime="20250602 13:03:38.200"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20250602 13:03:38.201" endtime="20250602 13:03:38.299"/>
+</kw>
+<status status="PASS" starttime="20250602 13:03:30.722" endtime="20250602 13:03:38.299"/>
+</kw>
+<kw name="E Clicar no botão &quot;Entrar&quot;" library="01_FuncionalidadePix" sourcename="E Clicar no botão &quot;${NOME_BOTAO}&quot;">
+<kw name="Gera Frase Em String" library="RPA_Utils">
+<var>${NOME_BOTAO}</var>
+<arg>${NOME_BOTAO}</arg>
+<msg timestamp="20250602 13:03:38.303" level="INFO">${NOME_BOTAO} = ENTRAR</msg>
+<status status="PASS" starttime="20250602 13:03:38.302" endtime="20250602 13:03:38.303"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BOTAO_${NOME_BOTAO}}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250602 13:03:38.305" endtime="20250602 13:03:38.482"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_${NOME_BOTAO}}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250602 13:03:38.484" level="INFO">Clicking element '//a[contains(@class,'ea-button ea-button--ghost ht-cta')]'.</msg>
+<status status="PASS" starttime="20250602 13:03:38.483" endtime="20250602 13:03:39.953"/>
+</kw>
+<status status="PASS" starttime="20250602 13:03:38.301" endtime="20250602 13:03:39.953"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20250602 13:03:39.999" endtime="20250602 13:03:42.996"/>
+</kw>
+<doc>Exibição dos métodos de pagamento (PIX e Boleto).</doc>
+<status status="PASS" starttime="20250602 13:03:30.720" endtime="20250602 13:03:42.997"/>
+</test>
+<doc>Essa suíte testa o módulo da nova funcionalidade PIX Serasa Consumidor</doc>
+<status status="PASS" starttime="20250602 13:03:28.603" endtime="20250602 13:03:42.999"/>
+</suite>
+<status status="PASS" starttime="20250602 13:03:28.600" endtime="20250602 13:03:43.001"/>
+</suite>
+<status status="PASS" starttime="20250602 13:03:28.595" endtime="20250602 13:03:43.003"/>
+</suite>
+<status status="PASS" starttime="20250602 13:03:28.572" endtime="20250602 13:03:43.005"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Área de Trabalho">Área de Trabalho</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Teste Serasa">Área de Trabalho.Teste Serasa</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="TestCase">Área de Trabalho.Teste Serasa.TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="01 FuncionalidadePix">Área de Trabalho.Teste Serasa.TestCase.01 FuncionalidadePix</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20250602 13:03:28.611" level="ERROR">Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase\01_FuncionalidadePix.robot' on line 5: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg timestamp="20250602 13:03:28.613" level="ERROR">Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\Resource\01_FuncionalidadePix.robot' on line 2: Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase\01_FuncionalidadePix.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>
