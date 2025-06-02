@@ -1,0 +1,91 @@
+1. 📋 Cenários de Teste (Resumo para Excel)
+ID	Título do Cenário	Tipo	Prioridade	Automatizável?	Observações
+TC01	Exibição dos métodos de pagamento (PIX e Boleto)	UI	Alta	Sim (Frontend)	Verifica se as opções são exibidas corretamente
+TC02	Escolha de parcelamento com opção PIX habilitada	Funcional	Alta	Sim (Frontend + Backend)	Depende de regra por parceiro
+TC03	Exibição das datas de vencimento	Funcional	Alta	Sim (Frontend)	Validar parâmetros por parceiro
+TC04	Fechamento de acordo com PIX à vista	Funcional	Alta	Sim	Geração da chave PIX
+TC05	Fechamento de acordo com PIX parcelado	Funcional	Alta	Sim	Depende da configuração do parceiro
+TC06	Cópia da chave PIX + instruções de pagamento	UI	Média	Sim	Após o fechamento do acordo
+TC07	Envio de chave PIX por webhook de pagamento recebido	Integração	Alta	Sim (Backend)	Mockar retorno do banco
+TC08	Atualização do status para “Pago” no histórico	Backend	Alta	Sim	Validar persistência do status
+TC09	Notificação ao consumidor (e-mail e in-app)	Integração	Alta	Sim (Backend + Mock SMTP)	Verificar envio correto
+TC10	Visualização no histórico com status atualizado	UI	Alta	Sim	Confirmar dados persistidos corretamente
+TC11	Tentativa de pagamento com chave inválida	Negativo	Média	Sim (Backend)	Validação da chave PIX
+TC12	Garantia de que boleto ainda está disponível	Regressão	Alta	Sim	Teste de não-regressão
+
+2. 🔝 Priorização de Testes Automatizados
+Critérios de Priorização:
+
+Alto impacto ao usuário final
+
+Críticos para o fluxo principal da jornada
+
+Estáveis e de fácil automação (baixo esforço)
+
+Automatizar primeiro:
+
+TC01, TC02, TC04, TC07, TC08, TC09, TC10
+Justificativas:
+
+Alto risco de falha
+
+Cobrem o fluxo completo (do checkout ao pós-pagamento)
+
+Possuem dependências integradas (API e UI)
+
+Podem ser testados com mocks e fixtures confiáveis
+
+3. 🧪 Casos de Teste Detalhados (Exemplo: TC04)
+Caso: TC04 – Fechamento de Acordo com PIX à Vista
+Pré-condições: Consumidor autenticado, dívida elegível para PIX à vista
+
+Passos:
+
+Acessar app e navegar para a dívida selecionada
+
+Escolher "Negociar"
+
+Selecionar método de pagamento: PIX
+
+Escolher opção à vista
+
+Selecionar data de vencimento
+
+Confirmar fechamento do acordo
+
+Resultado Esperado:
+
+Exibição da tela de resumo
+
+Apresentação da chave PIX
+
+Exibição do botão de “Copiar Chave” + Instruções claras de uso
+
+4. 🤖 Automação de Testes (Exemplos)
+Ferramenta utilizada:
+Backend: POSTMAN
+
+Frontend (Web): Robotframework
+
+Integração: Testes com mocks e simuladores (e.g., Webhook test API ou mocker interno)
+
+5 Cenários para automatizar (dividido por tipo)
+✅ Frontend (com Robotframework)
+TC01 – Verificar exibição de opções PIX e Boleto
+
+TC02 – Validar seleção de parcelas habilitadas
+
+TC04 – Fluxo de fechamento de acordo à vista
+
+TC06 – Cópia da chave PIX e instruções
+
+TC10 – Verificação do histórico com status "Pago"
+
+✅ Backend (com POSTMAN)
+TC07 – Mock de webhook com confirmação de pagamento
+
+TC08 – Atualização do status para “Pago” na base de dados
+
+TC09 – Verificação do envio de e-mail via SMTP fake
+
+📁 Excel (estrutura pronta para exportar)
