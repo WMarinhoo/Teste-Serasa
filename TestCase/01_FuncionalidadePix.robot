@@ -11,7 +11,8 @@ Cenário 01: Exibição dos métodos de pagamento (PIX e Boleto)
     [Documentation]    Exibição dos métodos de pagamento (PIX e Boleto).
     Dado que esteja no Portal "SERASA"
     E Clicar no botão "Entrar"
-    
+    E Inserir no campo "CPF" o valor "14248648792"
+    E Clicar no botão "Continuar"                            
 
 # Cenário 02: Escolha de parcelamento com opção (PIX habilitada)
 

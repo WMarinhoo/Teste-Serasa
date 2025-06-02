@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.6 on win32)" generated="20250602 13:03:28.565" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.6 on win32)" generated="20250602 13:10:08.660" rpa="false" schemaversion="4">
 <suite id="s1" name="Área de Trabalho" source="c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho">
 <suite id="s1-s1" name="Teste Serasa" source="c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa">
 <suite id="s1-s1-s1" name="TestCase" source="c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase">
@@ -10,51 +10,73 @@
 <arg>${TELA_SERASA}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20250602 13:03:30.723" level="INFO">Opening browser 'chrome' to base url 'https://www.serasa.com.br/limpa-nome-online/'.</msg>
-<status status="PASS" starttime="20250602 13:03:30.722" endtime="20250602 13:03:38.200"/>
+<msg timestamp="20250602 13:10:10.769" level="INFO">Opening browser 'chrome' to base url 'https://www.serasa.com.br/limpa-nome-online/'.</msg>
+<status status="PASS" starttime="20250602 13:10:10.768" endtime="20250602 13:10:19.923"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20250602 13:03:38.201" endtime="20250602 13:03:38.299"/>
+<status status="PASS" starttime="20250602 13:10:19.924" endtime="20250602 13:10:20.076"/>
 </kw>
-<status status="PASS" starttime="20250602 13:03:30.722" endtime="20250602 13:03:38.299"/>
+<status status="PASS" starttime="20250602 13:10:10.767" endtime="20250602 13:10:20.077"/>
 </kw>
 <kw name="E Clicar no botão &quot;Entrar&quot;" library="01_FuncionalidadePix" sourcename="E Clicar no botão &quot;${NOME_BOTAO}&quot;">
 <kw name="Gera Frase Em String" library="RPA_Utils">
 <var>${NOME_BOTAO}</var>
 <arg>${NOME_BOTAO}</arg>
-<msg timestamp="20250602 13:03:38.303" level="INFO">${NOME_BOTAO} = ENTRAR</msg>
-<status status="PASS" starttime="20250602 13:03:38.302" endtime="20250602 13:03:38.303"/>
+<msg timestamp="20250602 13:10:20.082" level="INFO">${NOME_BOTAO} = ENTRAR</msg>
+<status status="PASS" starttime="20250602 13:10:20.081" endtime="20250602 13:10:20.082"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${BOTAO_${NOME_BOTAO}}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250602 13:03:38.305" endtime="20250602 13:03:38.482"/>
+<status status="PASS" starttime="20250602 13:10:20.084" endtime="20250602 13:10:20.257"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BOTAO_${NOME_BOTAO}}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250602 13:03:38.484" level="INFO">Clicking element '//a[contains(@class,'ea-button ea-button--ghost ht-cta')]'.</msg>
-<status status="PASS" starttime="20250602 13:03:38.483" endtime="20250602 13:03:39.953"/>
+<msg timestamp="20250602 13:10:20.259" level="INFO">Clicking element '//a[contains(@class,'ea-button ea-button--ghost ht-cta')]'.</msg>
+<status status="PASS" starttime="20250602 13:10:20.257" endtime="20250602 13:10:21.687"/>
 </kw>
-<status status="PASS" starttime="20250602 13:03:38.301" endtime="20250602 13:03:39.953"/>
+<status status="PASS" starttime="20250602 13:10:20.080" endtime="20250602 13:10:21.687"/>
+</kw>
+<kw name="E Inserir no campo &quot;CPF&quot; o valor &quot;14248648792&quot;" library="01_FuncionalidadePix" sourcename="E Inserir no campo &quot;${CAMPO}&quot; o valor &quot;${VALOR}&quot;">
+<kw name="Gera Frase Em String" library="RPA_Utils">
+<var>${CAMPO}</var>
+<arg>${CAMPO}</arg>
+<msg timestamp="20250602 13:10:21.690" level="INFO">${CAMPO} = CPF</msg>
+<status status="PASS" starttime="20250602 13:10:21.689" endtime="20250602 13:10:21.690"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CAMPO_${CAMPO}}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250602 13:10:21.691" endtime="20250602 13:10:25.116"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CAMPO_${CAMPO}}</arg>
+<arg>${VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250602 13:10:25.119" level="INFO">Typing text '14248648792' into text field 'id=f-cpf'.</msg>
+<status status="PASS" starttime="20250602 13:10:25.117" endtime="20250602 13:10:25.371"/>
+</kw>
+<status status="PASS" starttime="20250602 13:10:21.689" endtime="20250602 13:10:25.371"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20250602 13:03:39.999" endtime="20250602 13:03:42.996"/>
+<status status="PASS" starttime="20250602 13:10:25.372" endtime="20250602 13:10:27.961"/>
 </kw>
 <doc>Exibição dos métodos de pagamento (PIX e Boleto).</doc>
-<status status="PASS" starttime="20250602 13:03:30.720" endtime="20250602 13:03:42.997"/>
+<status status="PASS" starttime="20250602 13:10:10.766" endtime="20250602 13:10:27.962"/>
 </test>
 <doc>Essa suíte testa o módulo da nova funcionalidade PIX Serasa Consumidor</doc>
-<status status="PASS" starttime="20250602 13:03:28.603" endtime="20250602 13:03:42.999"/>
+<status status="PASS" starttime="20250602 13:10:08.709" endtime="20250602 13:10:27.965"/>
 </suite>
-<status status="PASS" starttime="20250602 13:03:28.600" endtime="20250602 13:03:43.001"/>
+<status status="PASS" starttime="20250602 13:10:08.706" endtime="20250602 13:10:27.969"/>
 </suite>
-<status status="PASS" starttime="20250602 13:03:28.595" endtime="20250602 13:03:43.003"/>
+<status status="PASS" starttime="20250602 13:10:08.701" endtime="20250602 13:10:27.972"/>
 </suite>
-<status status="PASS" starttime="20250602 13:03:28.572" endtime="20250602 13:03:43.005"/>
+<status status="PASS" starttime="20250602 13:10:08.670" endtime="20250602 13:10:27.974"/>
 </suite>
 <statistics>
 <total>
@@ -70,7 +92,7 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20250602 13:03:28.611" level="ERROR">Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase\01_FuncionalidadePix.robot' on line 5: Setting 'Test Teardown' is not allowed in resource file.</msg>
-<msg timestamp="20250602 13:03:28.613" level="ERROR">Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\Resource\01_FuncionalidadePix.robot' on line 2: Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase\01_FuncionalidadePix.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
+<msg timestamp="20250602 13:10:08.720" level="ERROR">Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase\01_FuncionalidadePix.robot' on line 5: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg timestamp="20250602 13:10:08.724" level="ERROR">Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\Resource\01_FuncionalidadePix.robot' on line 2: Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase\01_FuncionalidadePix.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
 </errors>
 </robot>
