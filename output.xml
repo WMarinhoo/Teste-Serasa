@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.6 on win32)" generated="20250602 13:10:08.660" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.6 on win32)" generated="20250602 13:28:17.541" rpa="false" schemaversion="4">
 <suite id="s1" name="Área de Trabalho" source="c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho">
 <suite id="s1-s1" name="Teste Serasa" source="c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa">
 <suite id="s1-s1-s1" name="TestCase" source="c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase">
@@ -10,89 +10,180 @@
 <arg>${TELA_SERASA}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20250602 13:10:10.769" level="INFO">Opening browser 'chrome' to base url 'https://www.serasa.com.br/limpa-nome-online/'.</msg>
-<status status="PASS" starttime="20250602 13:10:10.768" endtime="20250602 13:10:19.923"/>
+<msg timestamp="20250602 13:28:20.310" level="INFO">Opening browser 'chrome' to base url 'https://www.serasa.com.br/limpa-nome-online/'.</msg>
+<status status="PASS" starttime="20250602 13:28:20.309" endtime="20250602 13:28:24.392"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20250602 13:10:19.924" endtime="20250602 13:10:20.076"/>
+<status status="PASS" starttime="20250602 13:28:24.392" endtime="20250602 13:28:24.605"/>
 </kw>
-<status status="PASS" starttime="20250602 13:10:10.767" endtime="20250602 13:10:20.077"/>
+<status status="PASS" starttime="20250602 13:28:20.309" endtime="20250602 13:28:24.605"/>
 </kw>
 <kw name="E Clicar no botão &quot;Entrar&quot;" library="01_FuncionalidadePix" sourcename="E Clicar no botão &quot;${NOME_BOTAO}&quot;">
 <kw name="Gera Frase Em String" library="RPA_Utils">
 <var>${NOME_BOTAO}</var>
 <arg>${NOME_BOTAO}</arg>
-<msg timestamp="20250602 13:10:20.082" level="INFO">${NOME_BOTAO} = ENTRAR</msg>
-<status status="PASS" starttime="20250602 13:10:20.081" endtime="20250602 13:10:20.082"/>
+<msg timestamp="20250602 13:28:24.609" level="INFO">${NOME_BOTAO} = ENTRAR</msg>
+<status status="PASS" starttime="20250602 13:28:24.608" endtime="20250602 13:28:24.610"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${BOTAO_${NOME_BOTAO}}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250602 13:10:20.084" endtime="20250602 13:10:20.257"/>
+<status status="PASS" starttime="20250602 13:28:24.610" endtime="20250602 13:28:24.744"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BOTAO_${NOME_BOTAO}}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250602 13:10:20.259" level="INFO">Clicking element '//a[contains(@class,'ea-button ea-button--ghost ht-cta')]'.</msg>
-<status status="PASS" starttime="20250602 13:10:20.257" endtime="20250602 13:10:21.687"/>
+<msg timestamp="20250602 13:28:24.746" level="INFO">Clicking element '//a[contains(@class,'ea-button ea-button--ghost ht-cta')]'.</msg>
+<status status="PASS" starttime="20250602 13:28:24.744" endtime="20250602 13:28:31.496"/>
 </kw>
-<status status="PASS" starttime="20250602 13:10:20.080" endtime="20250602 13:10:21.687"/>
+<status status="PASS" starttime="20250602 13:28:24.606" endtime="20250602 13:28:31.497"/>
 </kw>
 <kw name="E Inserir no campo &quot;CPF&quot; o valor &quot;14248648792&quot;" library="01_FuncionalidadePix" sourcename="E Inserir no campo &quot;${CAMPO}&quot; o valor &quot;${VALOR}&quot;">
 <kw name="Gera Frase Em String" library="RPA_Utils">
 <var>${CAMPO}</var>
 <arg>${CAMPO}</arg>
-<msg timestamp="20250602 13:10:21.690" level="INFO">${CAMPO} = CPF</msg>
-<status status="PASS" starttime="20250602 13:10:21.689" endtime="20250602 13:10:21.690"/>
+<msg timestamp="20250602 13:28:31.507" level="INFO">${CAMPO} = CPF</msg>
+<status status="PASS" starttime="20250602 13:28:31.506" endtime="20250602 13:28:31.508"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${CAMPO_${CAMPO}}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250602 13:10:21.691" endtime="20250602 13:10:25.116"/>
+<status status="PASS" starttime="20250602 13:28:31.508" endtime="20250602 13:28:31.562"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_${CAMPO}}</arg>
 <arg>${VALOR}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20250602 13:10:25.119" level="INFO">Typing text '14248648792' into text field 'id=f-cpf'.</msg>
-<status status="PASS" starttime="20250602 13:10:25.117" endtime="20250602 13:10:25.371"/>
+<msg timestamp="20250602 13:28:31.564" level="INFO">Typing text '14248648792' into text field 'id=f-cpf'.</msg>
+<status status="PASS" starttime="20250602 13:28:31.563" endtime="20250602 13:28:31.746"/>
 </kw>
-<status status="PASS" starttime="20250602 13:10:21.689" endtime="20250602 13:10:25.371"/>
+<status status="PASS" starttime="20250602 13:28:31.504" endtime="20250602 13:28:31.746"/>
+</kw>
+<kw name="E Clicar no botão &quot;Continuar&quot;" library="01_FuncionalidadePix" sourcename="E Clicar no botão &quot;${NOME_BOTAO}&quot;">
+<kw name="Gera Frase Em String" library="RPA_Utils">
+<var>${NOME_BOTAO}</var>
+<arg>${NOME_BOTAO}</arg>
+<msg timestamp="20250602 13:28:31.749" level="INFO">${NOME_BOTAO} = CONTINUAR</msg>
+<status status="PASS" starttime="20250602 13:28:31.748" endtime="20250602 13:28:31.750"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BOTAO_${NOME_BOTAO}}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250602 13:28:31.750" endtime="20250602 13:28:31.789"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_${NOME_BOTAO}}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250602 13:28:31.791" level="INFO">Clicking element '//button[@type='submit'][contains(.,'Continuar')]'.</msg>
+<status status="PASS" starttime="20250602 13:28:31.790" endtime="20250602 13:28:32.214"/>
+</kw>
+<status status="PASS" starttime="20250602 13:28:31.746" endtime="20250602 13:28:32.214"/>
+</kw>
+<kw name="E Inserir no campo &quot;Senha&quot; o valor &quot;Gugu@2019&quot;" library="01_FuncionalidadePix" sourcename="E Inserir no campo &quot;${CAMPO}&quot; o valor &quot;${VALOR}&quot;">
+<kw name="Gera Frase Em String" library="RPA_Utils">
+<var>${CAMPO}</var>
+<arg>${CAMPO}</arg>
+<msg timestamp="20250602 13:28:32.227" level="INFO">${CAMPO} = SENHA</msg>
+<status status="PASS" starttime="20250602 13:28:32.226" endtime="20250602 13:28:32.228"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CAMPO_${CAMPO}}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250602 13:28:32.228" endtime="20250602 13:28:33.131"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CAMPO_${CAMPO}}</arg>
+<arg>${VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250602 13:28:33.132" level="INFO">Typing text 'Gugu@2019' into text field 'id=current-password'.</msg>
+<status status="PASS" starttime="20250602 13:28:33.131" endtime="20250602 13:28:33.279"/>
+</kw>
+<status status="PASS" starttime="20250602 13:28:32.215" endtime="20250602 13:28:33.280"/>
+</kw>
+<kw name="E Clicar no botão &quot;Continuar&quot;" library="01_FuncionalidadePix" sourcename="E Clicar no botão &quot;${NOME_BOTAO}&quot;">
+<kw name="Gera Frase Em String" library="RPA_Utils">
+<var>${NOME_BOTAO}</var>
+<arg>${NOME_BOTAO}</arg>
+<msg timestamp="20250602 13:28:33.284" level="INFO">${NOME_BOTAO} = CONTINUAR</msg>
+<status status="PASS" starttime="20250602 13:28:33.283" endtime="20250602 13:28:33.284"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BOTAO_${NOME_BOTAO}}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250602 13:28:33.284" endtime="20250602 13:28:33.323"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_${NOME_BOTAO}}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250602 13:28:33.325" level="INFO">Clicking element '//button[@type='submit'][contains(.,'Continuar')]'.</msg>
+<status status="PASS" starttime="20250602 13:28:33.324" endtime="20250602 13:28:33.502"/>
+</kw>
+<status status="PASS" starttime="20250602 13:28:33.282" endtime="20250602 13:28:33.503"/>
+</kw>
+<kw name="E Clicar no botão &quot;Negociar Dívidas&quot;" library="01_FuncionalidadePix" sourcename="E Clicar no botão &quot;${NOME_BOTAO}&quot;">
+<kw name="Gera Frase Em String" library="RPA_Utils">
+<var>${NOME_BOTAO}</var>
+<arg>${NOME_BOTAO}</arg>
+<msg timestamp="20250602 13:28:33.506" level="INFO">${NOME_BOTAO} = NEGOCIAR_DIVIDAS</msg>
+<status status="PASS" starttime="20250602 13:28:33.505" endtime="20250602 13:28:33.506"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BOTAO_${NOME_BOTAO}}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20250602 13:28:38.820" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20250602 13:28:38.820" level="FAIL">Element '//div[contains(@class,'jsx-c19eff7efe344a10 main-content --with-backbar')]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20250602 13:28:33.506" endtime="20250602 13:28:38.826"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_${NOME_BOTAO}}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20250602 13:28:38.826" endtime="20250602 13:28:38.828"/>
+</kw>
+<status status="FAIL" starttime="20250602 13:28:33.504" endtime="20250602 13:28:38.828"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20250602 13:28:38.829" endtime="20250602 13:28:38.829"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20250602 13:10:25.372" endtime="20250602 13:10:27.961"/>
+<status status="PASS" starttime="20250602 13:28:38.830" endtime="20250602 13:28:41.246"/>
 </kw>
 <doc>Exibição dos métodos de pagamento (PIX e Boleto).</doc>
-<status status="PASS" starttime="20250602 13:10:10.766" endtime="20250602 13:10:27.962"/>
+<status status="FAIL" starttime="20250602 13:28:20.308" endtime="20250602 13:28:41.247">Element '//div[contains(@class,'jsx-c19eff7efe344a10 main-content --with-backbar')]' not visible after 5 seconds.</status>
 </test>
 <doc>Essa suíte testa o módulo da nova funcionalidade PIX Serasa Consumidor</doc>
-<status status="PASS" starttime="20250602 13:10:08.709" endtime="20250602 13:10:27.965"/>
+<status status="FAIL" starttime="20250602 13:28:17.578" endtime="20250602 13:28:41.249"/>
 </suite>
-<status status="PASS" starttime="20250602 13:10:08.706" endtime="20250602 13:10:27.969"/>
+<status status="FAIL" starttime="20250602 13:28:17.574" endtime="20250602 13:28:41.251"/>
 </suite>
-<status status="PASS" starttime="20250602 13:10:08.701" endtime="20250602 13:10:27.972"/>
+<status status="FAIL" starttime="20250602 13:28:17.570" endtime="20250602 13:28:41.253"/>
 </suite>
-<status status="PASS" starttime="20250602 13:10:08.670" endtime="20250602 13:10:27.974"/>
+<status status="FAIL" starttime="20250602 13:28:17.547" endtime="20250602 13:28:41.256"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Área de Trabalho">Área de Trabalho</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Teste Serasa">Área de Trabalho.Teste Serasa</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="TestCase">Área de Trabalho.Teste Serasa.TestCase</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="01 FuncionalidadePix">Área de Trabalho.Teste Serasa.TestCase.01 FuncionalidadePix</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Área de Trabalho">Área de Trabalho</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Teste Serasa">Área de Trabalho.Teste Serasa</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="TestCase">Área de Trabalho.Teste Serasa.TestCase</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="01 FuncionalidadePix">Área de Trabalho.Teste Serasa.TestCase.01 FuncionalidadePix</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20250602 13:10:08.720" level="ERROR">Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase\01_FuncionalidadePix.robot' on line 5: Setting 'Test Teardown' is not allowed in resource file.</msg>
-<msg timestamp="20250602 13:10:08.724" level="ERROR">Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\Resource\01_FuncionalidadePix.robot' on line 2: Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase\01_FuncionalidadePix.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
+<msg timestamp="20250602 13:28:17.588" level="ERROR">Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase\01_FuncionalidadePix.robot' on line 5: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg timestamp="20250602 13:28:17.592" level="ERROR">Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\Resource\01_FuncionalidadePix.robot' on line 2: Error in file 'c:\Users\wendel.santos\OneDrive - Softplan\Área de Trabalho\Teste Serasa\TestCase\01_FuncionalidadePix.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
 </errors>
 </robot>
