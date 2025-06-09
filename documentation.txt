@@ -8,10 +8,7 @@ TC05	Fechamento de acordo com PIX parcelado	Funcional	Alta	Sim	Depende da config
 TC06	Cópia da chave PIX + instruções de pagamento	UI	Média	Sim	Após o fechamento do acordo
 TC07	Envio de chave PIX por webhook de pagamento recebido	Integração	Alta	Sim (Backend)	Mockar retorno do banco
 TC08	Atualização do status para “Pago” no histórico	Backend	Alta	Sim	Validar persistência do status
-TC09	Notificação ao consumidor (e-mail e in-app)	Integração	Alta	Sim (Backend + Mock SMTP)	Verificar envio correto
-TC10	Visualização no histórico com status atualizado	UI	Alta	Sim	Confirmar dados persistidos corretamente
-TC11	Tentativa de pagamento com chave inválida	Negativo	Média	Sim (Backend)	Validação da chave PIX
-TC12	Garantia de que boleto ainda está disponível	Regressão	Alta	Sim	Teste de não-regressão
+
 
 2. 🔝 Priorização de Testes Automatizados
 Critérios de Priorização:
@@ -79,13 +76,9 @@ TC04 – Fluxo de fechamento de acordo à vista
 
 TC06 – Cópia da chave PIX e instruções
 
-TC10 – Verificação do histórico com status "Pago"
-
-✅ Backend (com POSTMAN)
 TC07 – Mock de webhook com confirmação de pagamento
 
 TC08 – Atualização do status para “Pago” na base de dados
 
-TC09 – Verificação do envio de e-mail via SMTP fake
 
 📁 Excel (estrutura pronta para exportar)
